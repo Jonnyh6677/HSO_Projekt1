@@ -3,7 +3,7 @@ Umfeld des Kunden
 Umfeld der Applikation
   Webbrowser auf jegl. webfähigen Geräten
 
-Anforderugen
+Anforderugen nach FURPS
 1. F:
 1.1 Aufnahme neuer Patienten in die PA (Anamnese)
 1.2 Erstellung einer Übersicht über die PA (Historie)
