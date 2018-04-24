@@ -1,0 +1,59 @@
+Drop TABLE Behandlung CASCADE;
+Drop TABLE PatientenBehandlung CASCADE;
+Drop TABLE Patient CASCADE;
+Drop TABLE Patientenakte CASCADE;
+
+CREATE TABLE Patient(
+ VersNr int PRIMARY KEY,
+ VName TEXT,
+ NName TEXT,
+ GebDatum TEXT,
+ Ort TEXT,
+ Straﬂe TEXT,
+ TelNr TEXT
+);
+
+CREATE TABLE Behandlung(
+ BehID int AUTO_INCREMENT primary key,
+ Symptome TEXT,
+ Diagnose TEXT,
+ Therapie TEXT
+);
+
+CREATE TABLE Patientenakte(
+VersNr int,
+Anamnese TEXT,
+PRIMARY KEY (VersNr),
+FOREIGN KEY (VersNr) REFERENCES Patient(VersNr)
+    
+);
+CREATE TABLE PatientenBehandlung(
+BehID int AUTO_INCREMENT ,
+VersNr int,
+PRIMARY KEY (VersNr,BehID),
+FOREIGN KEY (BehID) REFERENCES Behandlung(behid),
+FOREIGN KEY (VersNr) REFERENCES Patientenakte(VersNr)
+);
+
+INSERT INTO Patient VALUES(123,'Jonathan','Haas','20.10.1993','Gengenbach','Breslauerstr 30','017612323');
+INSERT INTO Behandlung(Symptome,Diagnose,Therapie) VALUES('Halsweh','Grippe','Antibiotika');
+INSERT INTO Behandlung(Symptome,Diagnose,Therapie) VALUES('Brechen','Magendarm','Antibiotika');
+INSERT INTO Patientenakte VALUES(123,'Fusspilz usw...');
+INSERT INTO PatientenBehandlung VALUES(1,123);
+INSERT INTO PatientenBehandlung VALUES(2,123);
+
+INSERT INTO Patient VALUES(123123,'Emmanuel','Thaller','20.10.1993','Baden-Baden','Breslauerstr 30','017612323');
+INSERT INTO Behandlung(Symptome,Diagnose,Therapie) VALUES('Halsweh','Grippe','Antibiotika');
+INSERT INTO Behandlung(Symptome,Diagnose,Therapie) VALUES('Brechen','Magendarm','Antibiotika');
+INSERT INTO Patientenakte VALUES(123123,'Fusspilz usw...');
+INSERT INTO PatientenBehandlung VALUES(1,123123);
+INSERT INTO PatientenBehandlung VALUES(2,123123);
+
+Select * FROM PatientenBehandlung PB, Patient P, Behandlung B
+WHERE PB.VersNr = 123123 AND P.VersNr =123123 AND B.BehID = PB.BehID;
+
+
+
+
+
+
