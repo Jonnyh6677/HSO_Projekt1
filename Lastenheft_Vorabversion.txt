@@ -1,0 +1,34 @@
+Umfeld des Kunden
+  Krankenhaus, Arzt-Praxis
+Umfeld der Applikation
+  Webbrowser auf jegl. webfähigen Geräten
+
+Anforderugen
+1. F:
+1.1 Aufnahme neuer Patienten in die PA (Anamnese)
+1.2 Erstellung einer Übersicht über die PA (Historie)
+1.3 Eintragung / Einspeicherung der die Diagnose in die PA, incl. Signatur des beh. Arztes (Security)
+1.4 Möglichkeit der Bedienung über webfähige Mobilgeräte (Transportability, Compability)
+2. U:
+2.1 Responsive Design (Aesthetics)
+2.2 Beständigkeit der Ausgaben (Consistency)
+2.3 Anleitung zum verwalten / editieren der PA (Documentation)
+3. R:
+3.1 0% Fehlertoleranz (always on, no false data...)
+4. P:
+4.1 Reaktion auf Anfragen / Eingaben innerhalb einer Sekunde für < 32 gleichzeitige Anwender
+5. S:
+5.1 Wartungsfreiheit der DB / PA 
+5.2 Service Ansprechpartner 24/7 erreichbar
+
+Akzeptanzkriterien
+Erfolgreiche Durchführung folgender Punkte auf jew. PC + Tablet + Smartphone:
+  - Anamnese
+  - Abruf der Historie
+  - Erstellung einer Diagnose mit und ohne Signatur des beh. Arztes (letzteres muss Fehlschlagen)
+Lasttest mit 31 gleichzeitigen Anwendern
+
+Glossar
+PA - Patientenakte
+DB - Datenbank
+24/7 - Zu jedem Zeitpunkt
