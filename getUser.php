@@ -19,9 +19,8 @@ $result = $conn->query($sql);
 
 
 
-echo "<table>
+echo "<table class='table'>";
 while($row = $result->fetch_assoc()) {
-    echo "<tr>";
     echo "<tr><td>Vers.Nr.</td><td>" . $row['VersNr'] . "</td></tr>";
     echo "<tr><td>Vorname</td><td>" . $row['VName'] . "</td></tr>";
     echo "<tr><td>Nachname</td><td>" . $row['NName'] . "</td></tr>";
