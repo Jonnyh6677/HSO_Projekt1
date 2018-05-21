@@ -1,0 +1,166 @@
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+body {
+  padding-left: 15vw;
+  padding-right: 15vw;
+  height: 100vh;
+  background-color: lightgrey;
+}
+
+body>div {
+  width: 100% !important;
+  background-color: white;
+}
+
+#oben {
+  height: 33vh;
+}
+
+#unten {
+  height: 67vh;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-tabs li.active a:hover,
+a,
+input::placeholder,
+input {
+  color: #3257a8;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #6d92c7;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid lightgrey;
+}
+
+.nav-tabs li a,
+.nav-tabs li.active a,
+.nav-tabs li a:hover,
+.nav-tabs li a:focus,
+.nav-tabs li.active a:hover,
+.nav-tabs li.active a:focus {
+  border: 0;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-tabs li.active a {
+  border-bottom: 6px solid #37a794 !important;
+  color: #3257a8;
+}
+
+.nav-tabs li {
+  width: 20%;
+  text-align: center;
+}
+
+div.tab-pane {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#oben {
+  display: flex;
+  align-items: stretch;
+  padding: 2%;
+}
+
+#oben>div {
+  flex-grow: 1;
+  height: 100%;
+}
+
+#oben>div:first-child {
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  max-width: 50%;
+  overflow-y: scroll;
+}
+
+/*
+.aktion>div:first-child {
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  width: 50%;
+  height: 15%;
+  border-left: 6px solid #37a794;
+  margin: 5%;
+  margin-left: 45%;
+}*/
+
+.aktion>div input {
+  /* display: none !important; */
+  position: absolute;
+  right: 0px;
+  height: 5vh;
+  z-index: -1;
+  border-radius: 5vh;
+  border: 0;
+  background-color: #37a794;
+  padding-right: 5%;
+}
+
+.aktion>div {
+  margin-left: 75%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 14px;
+  display: table;
+  position: relative;
+  background-color: #37a794;
+  border-radius: 50%;
+  height: 5vh;
+  width: 5vh !important;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  z-index: 10;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.aktion>div a {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.aktion>div:first-child,
+.aktion a>div {
+  display: table;
+}
+
+.aktion>div>input {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/*  .aktion > div:nth-child(2) div {
+background-color: #6d92c7;
+}
+.aktion > div:nth-child(3) div {
+background-color: #a8c7e8;
+}
+*/
+
+
+/*
+farbpalette:
+grün:
+#37a794
+#63bd9a
+#b5dcca
+blau:
+#3257a8
+#6d92c7
+#a8c7e8
+*/
