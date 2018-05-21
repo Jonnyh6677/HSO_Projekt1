@@ -80,7 +80,7 @@ Arzt = document.getElementById("Arzt").value;
 
                if(this.responseText==1)
                {
-                  window.location = "http://localhost/user.html"
+                  window.location = "./user.html"
                }
            }
        };
