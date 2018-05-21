@@ -1,6 +1,6 @@
 use sql7239138;
 
-#DROP TABLE Behandlung ,PatientenBehandlung, Patient, Patientenakte, Users;
+DROP TABLE Behandlung ,PatientenBehandlung, Patient, Patientenakte, Users;
 
 CREATE TABLE Patient(
  VersNr int PRIMARY KEY,
