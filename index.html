@@ -19,7 +19,7 @@ pw = document.getElementById("pw").value;
   document.getElementById("test").innerHTML = "in func" ;
    if (user == "" ||pw == "" ) {
        document.getElementById("test").innerHTML = "Failed";
-       return;
+
    } else {
        if (window.XMLHttpRequest) {
            // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -30,7 +30,7 @@ pw = document.getElementById("pw").value;
        }
        xmlhttp.onreadystatechange = function() {
            if (this.readyState == 4 && this.status == 200) {
-
+document.getElementById("test").innerHTML = "DB";
               document.getElementById("test").innerHTML = this.responseText ;
              if(this.responseText == 0){
 
