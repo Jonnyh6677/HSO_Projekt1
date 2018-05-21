@@ -20,38 +20,16 @@ $result = $conn->query($sql);
 
 
 echo "<table>
-<tr>
-<th>VersNr</th>
-<th>VNacme</th>
-<th>NName</th>
-<th>GebDatum</th>
-<th>Ort</th>
-<th>TelNr</th>
-</tr>";
 while($row = $result->fetch_assoc()) {
     echo "<tr>";
-    echo "<td>" . $row['VersNr'] . "</td>";
-    echo "<td>" . $row['VName'] . "</td>";
-    echo "<td>" . $row['NName'] . "</td>";
-    echo "<td>" . $row['GebDatum'] . "</td>";
-   echo "<td>" . $row['Ort'] . "</td>";
-   echo "<td>" . $row['TelNr'] . "</td>";
-    echo "</tr>";
+    echo "<tr><td>Vers.Nr.</td><td>" . $row['VersNr'] . "</td></tr>";
+    echo "<tr><td>Vorname</td><td>" . $row['VName'] . "</td></tr>";
+    echo "<tr><td>Nachname</td><td>" . $row['NName'] . "</td></tr>";
+    echo "<tr><td>Geburtstag</td><td>" . $row['GebDatum'] . "</td></tr>";
+    echo "<tr><td>Ort</td><td>" . $row['Ort'] . "</td></tr>";
+    echo "<tr><td>Telefon</td><td>" . $row['TelNr'] . "</td></tr>";
 }
 echo "</table>";
-
-$behandlungen ="Select B.BehID,B.Symptome,B.Diagnose,B.Therapie FROM PatientenBehandlung PB, Patient P, Behandlung B
-WHERE PB.VersNr = ".$vers." AND P.VersNr =".$vers." AND B.BehID = PB.BehID";
-
-$result = $conn->query($behandlungen);
-
-
-
-
-
-
-
-
 
 $conn->close();
 ?>
