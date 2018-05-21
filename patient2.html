@@ -27,7 +27,7 @@
              }
              xmlhttp.onreadystatechange = function() {
                  if (this.readyState == 4 && this.status == 200) {
-
+                       document.getElementById("test").innerHTML =this.responseText;
                    if(this.responseText == 0){
                      document.getElementById("test").innerHTML = "0";
                     window.location = "./Registration2.html"
