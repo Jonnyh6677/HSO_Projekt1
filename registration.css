@@ -145,7 +145,7 @@ div.tab-pane {
 }
 
 .aktion > div:first-child, .aktion > div:nth-child(2), .nav-tabs {
-  display: none;
+  display: none !important;
 }
 
 /*  .aktion > div:nth-child(2) div {
