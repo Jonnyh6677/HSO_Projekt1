@@ -30,13 +30,12 @@ pw = document.getElementById("pw").value;
        }
        xmlhttp.onreadystatechange = function() {
            if (this.readyState == 4 && this.status == 200) {
-document.getElementById("test").innerHTML = "DB";
-              document.getElementById("test").innerHTML = this.responseText ;
+    document.getElementById("test").innerHTML = this.responseText;
              if(this.responseText == 0){
-
+                  document.getElementById("test").innerHTML = "0";
              }
-             else{
-
+             else if(this.responseText == 1){
+              document.getElementById("test").innerHTML = "1";
                window.location = "./patient2.html";
              }
 

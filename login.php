@@ -1,5 +1,5 @@
  <?php
- session_start(); //Nicht vergessen
+session_start(); //Nicht vergessen
 $u = $_GET['u'];
 $p = $_GET['p'];
 $servername = "sql7.freemysqlhosting.net";
@@ -19,17 +19,18 @@ $sql = "Select * FROM Users U Where U.User = '".$u."' AND U.Password = '".$p."' 
 $result = $conn->query($sql);
 
 
-if ($result->num_rows === 0) {
+if ($result->num_rows == 0) {
     echo 0;
-    exit;
+    
 }
 
-
+else{
 $_SESSION['username'] = $u;
 $conn->close();
 
 echo 1;
-exit;
+
+}
 
 
 ?>
