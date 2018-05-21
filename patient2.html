@@ -1,0 +1,73 @@
+<html>
+<head>
+
+
+    <meta charset="UTF-8">
+
+    <title>CodePen - Login </title>
+
+    <link rel="stylesheet" href="css/reset.css">
+
+      <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+      <script>
+      function showUser() {
+      versnr = document.getElementById("vers").value;
+
+         if (versnr== "" ) {
+
+             return;
+         } else {
+             if (window.XMLHttpRequest) {
+                 // code for IE7+, Firefox, Chrome, Opera, Safari
+                 xmlhttp = new XMLHttpRequest();
+             } else {
+                 // code for IE6, IE5
+                 xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+             }
+             xmlhttp.onreadystatechange = function() {
+                 if (this.readyState == 4 && this.status == 200) {
+
+                   if(this.responseText == 0){
+                     document.getElementById("test").innerHTML = "0";
+                    window.location = "http://localhost/Registration2.html"
+                   }
+                   else if (this.responseText == -1){
+                      document.getElementById("test").innerHTML = "-1";
+                  window.location = "http://localhost/login.html";
+                   }
+
+                   else if (this.responseText == 1){
+                      document.getElementById("test").innerHTML = "1";
+                  window.location = "http://localhost/user.html";
+                   }
+
+                 }
+             };
+             xmlhttp.open("GET","isInDb.php?v="+versnr,true);
+             xmlhttp.send();
+         }
+      }
+      </script>
+</head>
+
+<body>
+
+  <div class="wrap">
+		<div class="avatar">
+      <img src="http://cdn.ialireza.me/avatar.png">
+		</div>
+		<input type="text" id="vers" placeholder="Versicherungsnummer" required>
+		<div class="bar">
+			<i></i>
+		</div>
+		<button onclick = "showUser()">Sign in</button>
+
+	</div>
+<div id="test">test</div>
+
+
+  <script src="js/index.js"></script>
+
+</body>
+</html>
