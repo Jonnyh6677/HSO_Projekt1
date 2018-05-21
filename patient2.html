@@ -13,7 +13,7 @@
       <script>
       function showUser() {
       versnr = document.getElementById("vers").value;
-
+      document.getElementById("test").innerHTML = "inffunction";
          if (versnr== "" ) {
 
              return;
@@ -34,7 +34,7 @@
                    }
                    else if (this.responseText == -1){
                       document.getElementById("test").innerHTML = "-1";
-                  window.location = "./login.html";
+                  window.location = "./index.html";
                    }
 
                    else if (this.responseText == 1){

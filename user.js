@@ -92,6 +92,7 @@ Arzt = document.getElementById("Arzt").value;
 
 }
 
+
 jQuery(document).ready(function() {
   search = jQuery('.aktion input');
   search.hide();
