@@ -17,7 +17,7 @@ function showUser() {
 user = document.getElementById("username").value;
 pw = document.getElementById("pw").value;
    if (user == "" ||pw == "" ) {
-       document.getElementById("txtHint").innerHTML = "Failed";
+       document.getElementById("test").innerHTML = "Failed";
        return;
    } else {
        if (window.XMLHttpRequest) {
@@ -30,6 +30,7 @@ pw = document.getElementById("pw").value;
        xmlhttp.onreadystatechange = function() {
            if (this.readyState == 4 && this.status == 200) {
 
+              document.getElementById("test").innerHTML = "this.responseText ";
              if(this.responseText == 0){
 
              }
@@ -61,7 +62,7 @@ pw = document.getElementById("pw").value;
 		<button onclick = 'showUser()'>Sign in</button>
 	</div>
 
-
+<div id="test">test</div>
 
   <script src="js/index.js"></script>
 
