@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
 
   <meta charset="UTF-8">
@@ -16,9 +17,9 @@
 function showUser() {
 user = document.getElementById("username").value;
 pw = document.getElementById("pw").value;
-  document.getElementById("test").innerHTML = "in func" ;
+
    if (user == "" ||pw == "" ) {
-       document.getElementById("test").innerHTML = "Failed";
+         document.getElementById("test").innerHTML = "Bitte gueltige Benutzerdaten eingeben!";
 
    } else {
        if (window.XMLHttpRequest) {
@@ -32,7 +33,7 @@ pw = document.getElementById("pw").value;
            if (this.readyState == 4 && this.status == 200) {
     document.getElementById("test").innerHTML = this.responseText;
              if(this.responseText == 0){
-                  document.getElementById("test").innerHTML = "0";
+                  document.getElementById("test").innerHTML = "Bitte gueltige Benutzerdaten eingeben!";
              }
              else if(this.responseText == 1){
               document.getElementById("test").innerHTML = "1";
@@ -58,11 +59,10 @@ pw = document.getElementById("pw").value;
 			<i></i>
 		</div>
 		<input type="password" id="pw" placeholder="password" required>
-		<a href="" class="forgot_link">forgot ?</a>
 		<button onclick = 'showUser()'>Sign in</button>
 	</div>
 
-<div id="test">test</div>
+<div id="test"></div>
 
   <script src="js/index.js"></script>
 

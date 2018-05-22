@@ -1,5 +1,6 @@
- <?php
-session_start(); //Nicht vergessen
+<?php
+session_start();
+
 $u = $_GET['u'];
 $p = $_GET['p'];
 $servername = "sql7.freemysqlhosting.net";
@@ -21,7 +22,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows == 0) {
     echo 0;
-    
+
 }
 
 else{

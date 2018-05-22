@@ -1,4 +1,4 @@
- <?php
+<?php
  session_start(); //Ganz wichtig
 
 $vers= intval($_SESSION['versnr']);

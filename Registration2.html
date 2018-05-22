@@ -27,43 +27,16 @@
   <div class="flex-container" id="oben">
     <div id="persInfo" class="table-responsive">
 
-      <form>
-        First name:<br>
-        <input type="text" id="VName">
-        <br>
-        Last name:<br>
-        <input type="text" id="NName">
-        <br>
-        Geb Datum:<br>
-        <input type="text" id="GebDatum">
-        <br>
-        Ort:<br>
-        <input type="text" id="Ort">
-        <br>
-        Strasse:<br>
-        <input type="text" id="Strasse">
-        <br>
-        TelNr:<br>
-        <input type="text" id="TelNr">
-        <br>
-        Anamnese:<br>
-        <input type="text" id="Anam">
-        <br>
-        Symptome:<br>
-        <input type="text" id="Symp">
-        <br>
-        Diagnose:<br>
-        <input type="text" id="Diag">
-        <br>
-        Therapie:<br>
-        <input type="text" id="Thrp">
-        <br>
-        Arzt:<br>
-        <input type="text" id="Arzt">
-        <br>
 
+      <table class='table'><tr>
+        <tr><td>Vorname</td><td><form> <input type="text" id="VName"></form></td></tr>
+          <tr><td>Nachname</td><td><form> <input type="text" id="NName"></form></td></tr>
+        <tr><td>Geburtstag</td><td><form> <input type="text" id="GebDatum"></form></td></tr>
+        <tr><td>Ort</td><td><form> <input type="text" id="Ort"></form></td></tr>
+        <tr><td>Strasse</td><td><form> <input type="text" id="Strasse"></form></td></tr>
+        <tr><td>Telefon</td><td><form> <input type="text" id="TelNr"></form></td></tr>
+    </table>
 
-      </form>
     </div>
     <div class="aktion">
       <div>
@@ -86,16 +59,29 @@
   </div>
   <div class="Container" id="unten">
     <ul class="nav nav-tabs">
-      <li class="active"><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-      <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-      <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
-      <li><a data-toggle="tab" href="#menu4">Menu 4</a></li>
-      <li><a data-toggle="tab" href="#menu5">Menu 5</a></li>
+      <li class="active"><a data-toggle="tab" href="#menu1">Behandlung hinzufuegen</a></li>
+
     </ul>
     <div class="tab-content">
 
       <div id="menu1" class="tab-pane fade in active">
-
+  <form>
+        Anamnese:<br>
+        <textarea class="form-control" id="Anam" rows="4"></textarea>
+        <br>
+        Symptome:<br>
+        <textarea class="form-control" id="Symp" rows="4"></textarea>
+        <br>
+        Diagnose:<br>
+        <textarea class="form-control" id="Diag" rows="4"></textarea>
+        <br>
+        Therapie:<br>
+        <textarea class="form-control" id="Thrp" rows="4"></textarea>
+        <br>
+        Arzt:<br>
+        <textarea class="form-control" id="Arzt" rows="1"></textarea>
+        <br>
+          <form>
       </div>
       <div id="menu2" class="tab-pane fade">
         <h3>Menu 2</h3>
